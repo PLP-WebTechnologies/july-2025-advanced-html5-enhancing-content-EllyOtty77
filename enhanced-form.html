@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML5 Form</title>
+</head>
+<body>
+
+    <header>
+        <h1>User Registration</h1>
+        <p>Please fill out this form to create an account. It demonstrates various HTML5 form features.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>User Details</h2>
+            <p>Here is a list of our services and a table of their details.</p>
+            <ul>
+                <li>Basic Account: Standard features</li>
+                <li>Premium Account: Advanced features and support</li>
+                <li>Enterprise Plan: Custom solutions for businesses</li>
+            </ul>
+
+            <table>
+                <caption>Service Plan Features</caption>
+                <thead>
+                    <tr>
+                        <th>Plan</th>
+                        <th>Storage</th>
+                        <th>Support</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Basic</td>
+                        <td>5 GB</td>
+                        <td>Email</td>
+                    </tr>
+                    <tr>
+                        <td>Premium</td>
+                        <td>50 GB</td>
+                        <td>24/7 Chat</td>
+                    </tr>
+                    <tr>
+                        <td>Enterprise</td>
+                        <td>Unlimited</td>
+                        <td>Dedicated Agent</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Registration Form</h2>
+            <form action="/submit-form" method="post" autocomplete="on">
+
+                <fieldset>
+                    <legend>Account Information</legend>
+                    <label for="username">Username:</label><br>
+                    <input type="text" id="username" name="username" required minlength="4" placeholder="Minimum 4 characters"><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="e.g., name@domain.com"><br><br>
+
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" required minlength="8" placeholder="Minimum 8 characters"><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    <label for="full-name">Full Name:</label><br>
+                    <input type="text" id="full-name" name="full-name" required autocomplete="name" placeholder="First and Last Name"><br><br>
+
+                    <label for="dob">Date of Birth:</label><br>
+                    <input type="date" id="dob" name="dob" required><br><br>
+
+                    <label for="country">Country:</label><br>
+                    <select id="country" name="country" required>
+                        <option value="">-- Select a country --</option>
+                        <option value="usa">United States</option>
+                        <option value="canada">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="other">Other</option>
+                    </select><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    <label for="comments">Comments:</label><br>
+                    <textarea id="comments" name="comments" rows="4" cols="50" readonly>This is a read-only text area for comments.</textarea><br><br>
+
+                    <label for="website">Website URL:</label><br>
+                    <input type="url" id="website" name="website" pattern="https?://.+" placeholder="https://www.example.com"><br><br>
+                </fieldset>
+
+                <input type="submit" value="Register">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2025</p>
+    </footer>
+
+</body>
+</html>
